@@ -24,11 +24,11 @@
 <hr>
 <p>如果从另一个角度看这个问题，其实这锅应该由 Parsec 来背：它根本就不该提供一个这样能把错误消息搞得乱七八糟的 API —— 为何不能自动判断要预读的符号呢？尽管传统的 Parser 生成器能够做到这些（而且在我们先前的例子里还能通过避免回溯来提高效率），其实是因为有一些基本的原因决定了 Parsec combinator（以及与之类似的 Monadic parser combinator）不能<a href="http://stackoverflow.com/a/7863380/23845" target="_blank" rel="external">判断预判符号是什么</a>。这就是很多 Haskell 程序员更倾向于使用高效但却<a href="https://hackage.haskell.org/package/attoparsec" target="_blank" rel="external">无错误处理的 parser</a> 的原因。</p>
 <p>那么为什么要写这篇文章呢？因为还是有不少文献推荐用 Parsec, 而且 Haskell 初学应该不会用 Parsec 实现他们的第一个 parser。最后，如果你想用 Parsec 写一个 parser, 那么你最好还是花点时间来限制回溯————这样你用 Parsec 的时候可能要<em>顺手得多</em>。</p>
-</article><section id="comments"><!--多说评论框--><div data-thread-key="post-parsec-try-a-or-b-considered-harmful" data-title="Parsec: try a &lt;|&gt; b 有害论" data.url="http://whst.github.io/2016/06/01/parsec-try-a-or-b-considered-harmful/" class="ds-thread"></div><div id="ds_thread"></div><!--多说评论框 END--><script type="text/javascript"> var duoshuoQuery = {short_name: 'http://whst.duoshuo.com/'};
+</article><section id="comments"><!--多说评论框--><div data-thread-key="post-parsec-try-a-or-b-considered-harmful" data-title="Parsec: try a &lt;|&gt; b 有害论" data.url="http://whst.github.io/2016/06/01/parsec-try-a-or-b-considered-harmful/" class="ds-thread"></div><div id="ds_thread"></div><!--多说评论框 END--><script type="text/javascript"> var duoshuoQuery = {short_name: 'whst'};
  (function() {
      var ds = document.createElement('script');
      ds.type = 'text/javascript';ds.async = true;
      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
      ds.charset = 'UTF-8';
      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
- })();</script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript></section></main></body></html>
+ })();</script><noscript>Please enable JavaScript to view the comments.</noscript></section></main></body></html>
